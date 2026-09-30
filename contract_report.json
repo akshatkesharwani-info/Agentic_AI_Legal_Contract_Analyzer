@@ -1,0 +1,48 @@
+{
+  "contract_type": "Master Services Agreement",
+  "overall_risk_score": 80,
+  "findings": [
+    {
+      "clause_title": "Indemnification",
+      "risk_level": "HIGH",
+      "verbatim_quote": "Customer shall indemnify, defend and hold harmless Vendor from any and all claims, losses, damages and expenses arising out of Customer's use of the Services, including claims caused by Vendor's own negligence. Vendor gives no indemnity to Customer of any kind.",
+      "risk_explanation": "The clause places the entire indemnity burden on the Customer, even for claims caused by the Vendor's own negligence, while providing no reciprocal indemnity for the Customer. This creates a significant exposure for the Customer and is unusually one‑sided.",
+      "suggested_redline": "Vendor shall indemnify and hold harmless Customer for any claims arising from Vendor's negligence or breach of this Agreement."
+    },
+    {
+      "clause_title": "Limitation of Liability",
+      "risk_level": "CRITICAL",
+      "verbatim_quote": "Vendor's total liability under this Agreement shall not exceed the fees paid by Customer in the one month before the claim arose. Vendor shall not be liable for any data loss, loss of profit or business interruption even if it was told such loss was possible. Customer's liability is unlimited.",
+      "risk_explanation": "Vendor's liability cap is extremely low and excludes core damages such as data loss and business interruption, while the Customer has unlimited liability. This asymmetry leaves the Customer exposed to potentially catastrophic losses with minimal recourse.",
+      "suggested_redline": "Limit Vendor's liability to at least the total fees paid in the preceding 12 months and include liability for data loss, loss of profit, and business interruption caused by Vendor's negligence. Remove unlimited liability for Customer."
+    },
+    {
+      "clause_title": "Termination",
+      "risk_level": "HIGH",
+      "verbatim_quote": "Vendor may terminate this Agreement for convenience by giving 7 days notice. Customer may terminate only for uncured material breach and must pay all fees for the remaining term if it terminates early.",
+      "risk_explanation": "Termination rights are heavily skewed to the Vendor, allowing unilateral termination with minimal notice, while the Customer can only exit for breach and must still pay the full remaining term, creating a lock‑in risk.",
+      "suggested_redline": "Provide mutual termination for convenience with at least 30 days notice and waive remaining fee obligations for the terminating party."
+    },
+    {
+      "clause_title": "Intellectual Property",
+      "risk_level": "HIGH",
+      "verbatim_quote": "All data uploaded by Customer, and all reports, models and other work created using the Services, shall be owned exclusively by Vendor. Customer assigns all rights in such materials to Vendor and waives any moral rights.",
+      "risk_explanation": "The clause strips the Customer of ownership of its own data and any outputs generated, transferring all rights to the Vendor. This deprives the Customer of control over its proprietary information and analytics.",
+      "suggested_redline": "Customer retains ownership of all data it uploads and any derivative works; Vendor receives a limited, non‑exclusive license to use such data solely for providing the Services."
+    },
+    {
+      "clause_title": "Fees and Payment",
+      "risk_level": "MEDIUM",
+      "verbatim_quote": "Vendor may increase the fees at any time by giving 7 days written notice, and the increased fees apply to the current term.",
+      "risk_explanation": "Vendor can raise fees unilaterally with only a 7‑day notice and apply the increase immediately, which can lead to unexpected cost spikes for the Customer.",
+      "suggested_redline": "Fee increases may only occur once per 12‑month period with at least 60 days written notice and cannot be applied retroactively to the current term."
+    },
+    {
+      "clause_title": "Services",
+      "risk_level": "MEDIUM",
+      "verbatim_quote": "Vendor may change, suspend or discontinue any feature at any time without prior notice.",
+      "risk_explanation": "The Vendor retains the right to alter or discontinue features without notice, potentially disrupting the Customer's operations and reliance on the platform.",
+      "suggested_redline": "Vendor must provide at least 30 days written notice before changing, suspending, or discontinuing any material feature, and must offer reasonable alternatives or refunds for affected services."
+    }
+  ]
+}
